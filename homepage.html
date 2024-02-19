@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 2rem;
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .button-container button {
+            flex: 1;
+            margin: 0 0.5rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #3e8e41;
+        }
+      
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 1rem 2rem;
+            width: calc(33.333% - 2rem);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        .feature-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .feature-description {
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+            line-height: 1.5;
+        }
+        .link-container {
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+            .top-links {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .top-links a {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        margin-bottom: 0;
+        transition: color 0.3s ease;
+        color: #4CAF50;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Expense Tracker Application</h1>
+        <p>Manage your expenses with ease and convenience. Our expense tracker allows you to stay on top of your finances, anywhere and anytime.</p>
+    
+        <div class="link-container">
+            <div class="top-links">
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+        <h1>Features</h1>
+        <div class="features-container">
+            <div class="feature-item">
+                <i class="fas fa-chart-line feature-icon"></i>
+                <h2 class="feature-title">Easy Visualization</h2>
+                <p class="feature-description">Track your spending habits with visually appealing charts and graphs. Gain insights into your financial behavior.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-mobile-alt feature-icon"></i>
+                <h2 class="feature-title">Access on the Go</h2>
+                <p class="feature-description">Our mobile-friendly design ensures you can access your expense tracker on your smartphone or tablet, anytime and anywhere.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-lock feature-icon"></i>
+                <h2 class="feature-title">Secure and Private</h2>
+                <p class="feature-description">We prioritize your security and privacy. Rest assured that your financial information is safe with us.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-credit-card feature-icon"></i>
+                <h2 class="feature-title">Multiple Payment Methods</h2>
+                <p class="feature-description">Add and track expenses using various payment methods, such as credit cards, debit cards, and cash.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-money-check-alt feature-icon"></i>
+                <h2 class="feature-title">Expense Categorization</h2>
+                <p class="feature-description">Organize your expenses into different categories, such as food, transportation, and entertainment, to better understand your spending habits.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-calendar-alt feature-icon"></i>
+                <h2 class="feature-title">Monthly Budgeting</h2>
+                <p class="feature-description">Set a monthly budget for each category and track your spending to avoid overspending.</p>
+            </div>
+            <div class="button-container">
+                <button onclick="location.href='#'">Add Expense</button>
+                <button onclick="location.href='#'">View Expenses</button>
+                <button onclick="location.href='#'">Make a budget</button>
+            </div>
+        </div>
+    </div>
+</body>
