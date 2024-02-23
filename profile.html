@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      .profile-container {
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .profile-image-container {
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 100%
+      ;
+
+      }
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #3498db;
+        margin-bottom: 10px;
+      }
+      .profile-container input[type="file"] {
+        display: none;
+      }
+      .profile-container .upload-btn {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 10px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: block;
+        margin: 2 auto;
+        
+      }
+      .profile-container .upload-btn:hover {
+        background-color: #2980b9;
+      }
+      .profile-container input[type="text"],
+      .profile-container input[type="email"],
+      .profile-container input[type="tel"],
+      .profile-container select,
+      .profile-container input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 5px 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+      }
+      .profile-container input[type="text"]:focus,
+      .profile-container input[type="email"]:focus,
+      .profile-container input[type="tel"]:focus,
+      .profile-container select:focus,
+      .profile-container input[type="password"]:focus {
+        border-color: #3498db;
+        outline: none;
+      }
+      .profile-container input[type="submit"] {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 32px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .profile-container input[type="submit"]:hover {
+        background-color: #2980b9;
+      }
+</style>
+</head>
+<body>
+
+<div class="profile-container">
+  <div class="profile-image-container">
+    <img src="#" alt="Profile Picture" class="profile-image" id="profile-img">
+    <input type="file" id="file-input" accept="image/*" onchange="previewImage(event)">
+    <label for="file-input" class="upload-btn">Upload Picture</label>
+  </div>
+  <input type="text" id="fname" name="fname" placeholder="First Name" required>
+  <br>
+  <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+  <br>
+  <input type="email" id="email" name="email" placeholder="Email" required>
+  
+  <input type="tel" id="tel" name="tel" placeholder="Telephone">
+  <br>
+  <input type="password" id="password" name="password" placeholder="Change Password">
+  <br>
+  <input type="submit" value="Save Profile">
+
+</div>
+
+<script>
+  function previewImage(event) {
+    const fileInput = event.target;
+    const files = fileInput.files;
+    if (files.length > 0) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const profileImg = document.getElementById('profile-img');
+        profileImg.src = e.target.result;
+      };
+      reader.readAsDataURL(files[0]);
+    }
+  }
+</script>
+
+</body>
+</html>
