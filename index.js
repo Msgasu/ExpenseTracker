@@ -12,7 +12,7 @@ function showSidebar() {
 
 // Function to hide the sidebar
 function hideSidebar() {
-    sidebar.style.display = 'none';
+    sidebar. style.display = 'none';
 }
 
 // Function to toggle sidebar visibility based on screen size
@@ -23,7 +23,7 @@ function toggleSidebar() {
         showSidebar();
     } else {
         // Toggle sidebar visibility using menuBtn and closeBtn
-        sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+        sidebar. style.display = sidebar. style.display === 'block' ? 'none' : 'block';
     }
 }
 
@@ -45,8 +45,6 @@ window.addEventListener('resize', () => {
     toggleSidebar();
 });
 
-
-
 // change theme
 themeToggler.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme-variables');
@@ -54,8 +52,6 @@ themeToggler.addEventListener('click', () => {
     themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
 })
-
-
 
 //****************  EXPENSES CHART  *********************************************************************
 
@@ -124,10 +120,6 @@ const config = {
 };
 
 const expenditure_chart = new Chart(ctx1, config);
-
-
-
-
 
 
 //****************  DASHBOARD CHART  *********************************************************************
@@ -199,9 +191,6 @@ function updateChart(period) {
   }
   myChart.update();
 }
-
-
-
 
 
 //**********   Transactions   **********************************************************************************
