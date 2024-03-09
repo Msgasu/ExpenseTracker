@@ -1,580 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Dashboard using HTML CSS and JavaScript</title>
-    <!-- MATERIAL CDN -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-    <!-- STYLESHEET -->
-    <link rel="stylesheet" href="./style.css" />
-    <style>
-      /* Add this style for hiding inactive sections */
-      main section {
-          display: none;
-      }
 
-
-      main {
-        padding: 20px;
-        width: 100%;
-        
-      }
-
-
-      /* Add this style for displaying active section */
-      main section.active-section {
-          display: block;
-      }
-      .other{
-        background-color: orange;
-        width: 0px;
-        size: 0px;
-      }
-
-
-      .transactions-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .expenditure_chart {
-        width: 48%; /* Adjust width as needed */
-    }
-
-    .transaction-form {
-        width: 48%; /* Adjust width as needed */
-    }
-
-    @media (max-width: 768px) {
-        .transactions-top {
-            flex-direction: column;
-        }
-
-        .expenditure_chart,
-        .transaction-form {
-            width: 100%;
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Dashboard using HTML CSS and JavaScript</title>
+  <!-- MATERIAL CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    /* Add this style for hiding inactive sections */
+    main section {
+      display: none;
     }
 
 
+    main {
+      padding: 20px;
+      width: 100%;
+
+    }
+
+
+    /* Add this style for displaying active section */
+    main section.active-section {
+      display: block;
+    }
+
+    .other {
+      background-color: orange;
+      width: 0px;
+      size: 0px;
+    }
+
+
+   
   </style>
-  </head>
-  <body>
-    <nav>
-      <div class="container">
-       
-        <div class="name">
-          <div class="logo">
-              <img src="./assets/images/logo.png" alt="logo">
-              <!-- <h2>MONEY<span class="danger">SIGHTS</span></h2> -->
-              <h2><span class="green">MONEY</span>SIGHTS</h2>
-          </div>
-         
-        </div>
-        
-          <div class="profile-area">
-              <div class="theme-toggler">
-                  <span class="material-icons-sharp active">light_mode</span>
-                  <span class="material-icons-sharp">dark_mode</span>
-              </div>
-              <div class="profile">
-                  <div class="profile-photo">
-                      <img src="./assets/images/profile-1.jpg">
-                  </div>
-                  <h5>Ryan Mbun</h5>
-                  <span class="material-icons-sharp">expand_more</span>
-              </div>
-              <button id="menu-btn">
-                  <span class="material-icons-sharp">menu</span>
-              </button>
-          </div>
-      </div>
-    </nav>
+</head>
 
+<body>
+  <nav>
     <div class="container">
-      <aside>
 
-        <button id="close-btn">
-          <span class="material-icons-sharp">close</span>
-         </button>
-        <div class="sidebar">
-          <a href="#" class="active" data-target="dashboard">
-            <span class="material-icons-sharp">grid_view</span>
-            <h3>Dashboard</h3>
-          </a>
-         
-          <a href="#"  data-target="transactions">
-            <span class="material-icons-sharp">receipt_long</span>
-            <h3>Transactions</h3>
-          </a>
-          <a href="#" data-target="budget">
-            <span class="material-icons-sharp">insights</span>
-            <h3>Budget</h3>
-          </a>
-
-          <a href="#" data-target="profile">
-            <span class="material-icons-sharp">person_outline</span>
-            <h3>Profile</h3>
-          </a>
-        
-          <a href="#" data-target="logout">
-            <span class="material-icons-sharp">logout</span>
-            <h3>Logout</h3>
-          </a>
+      <div class="name">
+        <div class="logo">
+          <img src="./assets/images/logo.png" alt="logo">
+          <!-- <h2>MONEY<span class="danger">SIGHTS</span></h2> -->
+          <h2><span class="green">MONEY</span>SIGHTS</h2>
         </div>
-      </aside>
-      <!------------------ END OF ASIDE ------------------>
-
-
-      <main>
-        <section id="dashboard" class="active-section">
-
-          <div class="dashboard-main">
-            <h1>Dashoard</h1>
-    
-            <div class="insights">
-              <div class="sales">
-                <span class="material-icons-sharp">analytics</span>
-                <div class="middle">
-                  <div class="left">
-                    <h3>Total Budget</h3>
-                    <h1>$25,024</h1>
-                  </div>
-                  <div class="progress">
-                    <svg>
-                      <circle cx="38" cy="38" r="36"></circle>
-                    </svg>
-                    <div class="number">
-                      <p>81%</p>
-                    </div>
-                  </div>
-                </div>
-                <small class="text-muted">Last 24 Hours</small>
-              </div>
-              <!------------ END OF SALES -------------->
-              <div class="expenses">
-                <span class="material-icons-sharp">bar_chart</span>
-                <div class="middle">
-                  <div class="left">
-                    <h3>Total Expenses</h3>
-                    <h1>$14,160</h1>
-                  </div>
-                  <div class="progress">
-                    <svg>
-                      <circle cx="38" cy="38" r="36"></circle>
-                    </svg>
-                    <div class="number">
-                      <p>62%</p>
-                    </div>
-                  </div>
-                </div>
-                <small class="text-muted">Last 24 Hours</small>
-              </div>
-              <!------------ END OF EXPENSES -------------->
-              <div class="income">
-                <span class="material-icons-sharp">stacked_line_chart</span>
-                <div class="middle">
-                  <div class="left">
-                    <h3>Total Savings</h3>
-                    <h1>$10,864</h1>
-                  </div>
-                  <div class="progress">
-                    <svg>
-                      <circle cx="38" cy="38" r="36"></circle>
-                    </svg>
-                    <div class="number">
-                      <p>44%</p>
-                    </div>
-                  </div>
-                </div>
-                <small class="text-muted">Last 24 Hours</small>
-              </div>
-              <!------------ END OF INCOME -------------->
-            </div>
-            <!------------ END OF INSIGHTS -------------->
-            
-            <div class="graph">
-              <canvas id="chart"></canvas>
-              <h2 class="chart-header">Money Flow</h2>
-              <div id="toggleButtons" class="toggle-buttons">
-                <input type="radio" id="week" name="timePeriod" value="week" checked> <label for="week">Week</label>
-                <input type="radio" id="month" name="timePeriod" value="month"> <label for="month">Month</label>
-                <input type="radio" id="year" name="timePeriod" value="year"> <label for="year">Year</label>
-              </div>
-            </div>
-            
-          </div>
-      
-          <div class="right">
-            <div class="recent-transactions">
-              <div class="header">
-                  <h2>Recent Transactions</h2>
-                  <a href="#">More <span class="material-icons-sharp">chevron_right</span></a>
-              </div>
-  
-              <div class="grid-container">
-                  <div class="transaction">
-                      <div class="service">
-                          <div class="icon bg-purple-light">
-                              <span class="material-icons-sharp purple">headset_mic</span>
-                          </div>
-                          <div class="details">
-                              <h4>Music</h4>
-                              <p>20.11.2021</p>
-                          </div>
-                      </div>
-                      <h4>-$20</h4>
-                  </div>
-                  <!-------- END OF TRANSACTION --------->
-                  
-                  <div class="transaction">
-                      <div class="service">
-                          <div class="icon bg-purple-light">
-                              <span class="material-icons-sharp purple">shopping_bag</span>
-                          </div>
-                          <div class="details">
-                              <h4>Shopping</h4>
-                              <p>21.11.2021</p>
-                          </div>
-                      </div>
-                     
-                      <h4>-$799</h4>
-                  </div>
-                  <!-------- END OF TRANSACTION --------->
-          
-                  <div class="transaction">
-                      <div class="service">
-                          <div class="icon bg-success-light">
-                              <span class="material-icons-sharp success">restaurant</span>
-                          </div>
-                          <div class="details">
-                              <h4>Restaurant</h4>
-                              <p>19.11.2021</p>
-                          </div>
-                      </div>
-                     
-                      <h4>-$50</h4>
-                  </div>
-                  <!-------- END OF TRANSACTION --------->
-          
-                  <div class="transaction">
-                      <div class="service">
-                          <div class="icon bg-danger-light">
-                              <span class="material-icons-sharp danger">sports_esports</span>
-                          </div>
-                          <div class="details">
-                              <h4>Games</h4>
-                              <p>15.11.2021</p>
-                          </div>
-                      </div>
-                      
-                      <h4>-$44</h4>
-                  </div>
-                  <!-------- END OF TRANSACTION --------->
-          
-                  <div class="transaction">
-                      <div class="service">
-                          <div class="icon bg-danger-light">
-                              <span class="material-icons-sharp danger">medication</span>
-                          </div>
-                          <div class="details">
-                              <h4>Pharmacy</h4>
-                              <p>15.11.2021</p>
-                          </div>
-                      </div>
-                      
-                      <h4>-$30</h4>
-                  </div>
-                  <!-------- END OF TRANSACTION --------->
-          
-                  <div class="transaction">
-                      <div class="service">
-                          <div class="icon bg-success-light">
-                              <span class="material-icons-sharp success">fitness_center</span>
-                          </div>
-                          <div class="details">
-                              <h4>Fitness</h4>
-                              <p>12.11.2021</p>
-                          </div>
-                      </div>
-                     
-                      <h4>-$45</h4>
-                  </div>
-                  <!-------- END OF TRANSACTION --------->
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-        <section id="transactions">
-
-          <h1>All Transactions</h1>
-          <div class="transactions-section">
-
-            <div class="transactions-top">
-                <!-- Transaction Form -->
-                <div class="transaction-form">
-                    <h2>Add Transaction</h2>
-                    <form id="addTransactionForm">
-                        <label for="amount">Amount:</label>
-                        <input type="text" id="amount" name="amount" required>
-        
-                        <label for="transactionDate">Transaction Date:</label>
-                        <input type="date" id="transactionDate" name="transactionDate" required>
-        
-                        <label for="description">Description:</label>
-                        <input type="text" id="description" name="description" required>
-        
-                        <label for="transactionType">Transaction Type:</label>
-                        <select id="transactionType" name="transactionType" required>
-                            <option value="Feeding">Feeding</option>
-                            <option value="Bills">Restaurant</option>
-                            <option value="School Fees">School Fees</option>
-                            <option value="Transportation">Transportation</option>
-                            <option value="Feeding">Games</option>
-                            <option value="Bills">Pharmacy</option>
-                            <option value="School Fees">Lending</option>
-                            <option value="Transportation">Gift</option>
-                            <option value="Transportation">Savings</option>
-                            <!-- Add more options as needed -->
-                        </select>
-        
-                        <button type="submit">Add Transaction</button>
-                    </form>
-                </div>
-                <div class="expenditure_chart" style="width: 50%;">
-                  <canvas id="expenditure_chart"></canvas>
-                </div>
-
-                
-            </div>
-           
-    
-            <!-- Transaction Table -->
-            <h2>Transactions</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Transaction ID</th>
-                        <th>User ID</th>
-                        <th>Amount</th>
-                        <th>Transaction Date</th>
-                        <th>Description</th>
-                        <th>Transaction Type</th>
-                    </tr>
-                </thead>
-                <tbody id="transactionTableBody">
-                    <!-- Transactions will be dynamically added here -->
-                </tbody>
-            </table>
-          </div>
-    
-          <!-- Transaction content here -->
-        </section>
-
-        <section id="budget">
-          <h1>Budget Settings</h1>
-          
-
-          <div class="budget-card">
-              <form class="budget-form">
-                  <div class="bar">
-                      <div class="overall-category">
-                          <h2>Overall Budget</h2>
-                          <label for="category-overall" class="category" id="overall-budget">
-                              <span class="material-icons-sharp icon">attach_money</span>
-                              Overall Budget:
-                              <input type="number" id="category-overall" name="overall-budget" placeholder="Enter overall budget">
-                          </label>
-                      </div>
-                      <button type="submit" >Save Budget</button>
-                  </div>
-                  
-                  <div class="other-categories">
-                      <h2>Budget Settings per Category</h2>
-                      <div class="category-grid">
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">headset_mic</span>
-                                  <label for="category-music">Music</label>
-                                  <input type="number" id="category-music" name="category-music" placeholder="Enter budget for music">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">restaurant</span>
-                                  <label for="category-restaurant">Restaurant</label>
-                                  <input type="number" id="category-restaurant" name="category-restaurant" placeholder="Enter budget for restaurant">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">sports_esports</span>
-                                  <label for="category-games">Games</label>
-                                  <input type="number" id="category-games" name="category-games" placeholder="Enter budget for games">
-                              </div>
-                          </div>
-                  
-                          <!-- Add more categories here -->
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">commute</span>
-                                  <label for="category-transportation">Transportation</label>
-                                  <input type="number" id="category-transportation" name="category-transportation" placeholder="Enter budget for transportation">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">local_pharmacy</span>
-                                  <label for="category-pharmacy">Pharmacy</label>
-                                  <input type="number" id="category-pharmacy" name="category-pharmacy" placeholder="Enter budget for pharmacy">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">fitness_center</span>
-                                  <label for="category-fitness">Fitness</label>
-                                  <input type="number" id="category-fitness" name="category-fitness" placeholder="Enter budget for fitness">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">shopping_cart</span>
-                                  <label for="category-shopping">Shopping</label>
-                                  <input type="number" id="category-shopping" name="category-shopping" placeholder="Enter budget for shopping">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">attach_money</span>
-                                  <label for="category-lending">Lending</label>
-                                  <input type="number" id="category-lending" name="category-lending" placeholder="Enter budget for lending">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">school</span>
-                                  <label for="category-school-fees">School Fees</label>
-                                  <input type="number" id="category-school-fees" name="category-school-fees" placeholder="Enter budget for school fees">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">card_giftcard</span>
-                                  <label for="category-gift">Gift</label>
-                                  <input type="number" id="category-gift" name="category-gift" placeholder="Enter budget for gift">
-                              </div>
-                          </div>
-                  
-                          <div class="category-card">
-                              <div class="category">
-                                  <span class="material-icons-sharp icon">savings</span>
-                                  <label for="category-savings">Savings</label>
-                                  <input type="number" id="category-savings" name="category-savings" placeholder="Enter budget for savings">
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  
-              </form>
-          </div>
-        </section>
-
-
-        <section id="profile">
-            <h1>Profile</h1>
-            <div class="profile-container">
-              <div class="profile-image-container">
-                <img src="#" alt="Profile Picture" class="profile-image" id="profile-img">
-                <input type="file" id="file-input" accept="image/*" onchange="previewImage(event)">
-                <label for="file-input" class="upload-btn">Upload Picture</label>
-              </div>
-              <input type="text" id="fname" name="fname" placeholder="First Name" required>
-              <br>
-              <input type="text" id="lname" name="lname" placeholder="Last Name" required>
-              <br>
-              <input type="email" id="email" name="email" placeholder="Email" required>
-              
-              <input type="tel" id="tel" name="tel" placeholder="Telephone">
-              <br>
-              <input type="password" id="password" name="password" placeholder="Change Password">
-              <br>
-              <input class="submit" type="submit" value="Save Profile">
-            
-            </div>
-            <!-- Orders content here -->
-        </section>
-    
-      </main>
-
-      <div class="other">
 
       </div>
-     
+
+      <div class="profile-area">
+        <div class="theme-toggler">
+          <span class="material-icons-sharp active">light_mode</span>
+          <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        <div class="profile">
+          <div class="profile-photo">
+            <img src="./assets/images/profile-1.jpg">
+          </div>
+          <h5>Ryan Mbun</h5>
+          <span class="material-icons-sharp">expand_more</span>
+        </div>
+        <button id="menu-btn">
+          <span class="material-icons-sharp">menu</span>
+        </button>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./orders.js"></script>
-    <script src="./index.js"></script>
+  </nav>
 
-  
-    <script>
-      // profile
-        function previewImage(event) {
-          const fileInput = event.target;
-          const files = fileInput.files;
-          if (files.length > 0) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-              const profileImg = document.getElementById('profile-img');
-              profileImg.src = e.target.result;
-            };
-            reader.readAsDataURL(files[0]);
-          }
-        }
+  <div class="container">
+    <aside>
+
+      <button id="close-btn">
+        <span class="material-icons-sharp">close</span>
+      </button>
+      <div class="sidebar">
+        <a href="#" class="active" data-target="dashboard">
+          <span class="material-icons-sharp">grid_view</span>
+          <h3>Dashboard</h3>
+        </a>
+
+        <a href="#" data-target="transactions">
+          <span class="material-icons-sharp">receipt_long</span>
+          <h3>Transactions</h3>
+        </a>
+        <a href="#" data-target="budget">
+          <span class="material-icons-sharp">insights</span>
+          <h3>Budget</h3>
+        </a>
+
+        <a href="#" data-target="profile">
+          <span class="material-icons-sharp">person_outline</span>
+          <h3>Profile</h3>
+        </a>
+
+        <a href="#" data-target="logout">
+          <span class="material-icons-sharp">logout</span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+    <!------------------ END OF ASIDE ------------------>
 
 
-      // Get all sidebar links
-      const sidebarLinks = document.querySelectorAll('.sidebar a');
-  
-      // Add click event listener to each link
-      sidebarLinks.forEach(link => {
-          link.addEventListener('click', (e) => {
-              e.preventDefault();
-              // Remove active class from all links
-              sidebarLinks.forEach(item => {
-                  item.classList.remove('active');
-              });
-              // Add active class to the clicked link
-              link.classList.add('active');
-  
-              // Get target section id from data attribute
-              const targetId = link.getAttribute('data-target');
-              // Hide all sections
-              document.querySelectorAll('main section').forEach(section => {
-                  section.classList.remove('active-section');
-              });
-              // Show target section
-              document.getElementById(targetId).classList.add('active-section');
-          });
-      });
+    <main>
+      <section id="dashboard" class="active-section">
+
+
+      </section>
+
+      <section id="transactions">
+
+      <!-- Transaction content here -->
+      </section>
+
+      <section id="budget">
+
+      </section>
+
+
+      <section id="profile">
+
+        <!-- Orders content here -->
+      </section>
+
+  </main>
+
+  <div class="other">
+
+  </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+    integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./index.js"></script>
+
+
+  <script>
+
+// Get all sidebar links
+const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+sidebarLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    sidebarLinks.forEach(item => {
+      item.classList.remove('active');
+    });
+    link.classList.add('active');
+    const targetId = link.getAttribute('data-target');
+    document.querySelectorAll('main section').forEach(section => {
+      section.classList.remove('active-section');
+    });
+
+    // Fetch content from corresponding HTML file using AJAX
+    fetch(`${targetId}.html`)
+      .then(response => response.text())
+      .then(data => {
+        // Show target section with fetched content
+        document.getElementById(targetId).innerHTML = data;
+        document.getElementById(targetId).classList.add('active-section');
+
+        // Execute JavaScript code present in the dynamically loaded content
+        const scriptElements = document.getElementById(targetId).querySelectorAll('script');
+        scriptElements.forEach(script => {
+          eval(script.innerHTML);
+        });
+      })
+      .catch(error => console.error('Error fetching content:', error));
+  });
+});
+
+// Function to load dashboard by default
+function loadDashboard() {
+  const dashboardLink = document.querySelector('.sidebar a[data-target="dashboard"]');
+  if (dashboardLink) {
+    dashboardLink.click();
+  }
+}
+
+// Add event listener to trigger loadDashboard function after the page has loaded
+window.addEventListener('load', loadDashboard);
+
+
   </script>
-  </body>
+</body>
 
-  
+
 </html>
