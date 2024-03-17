@@ -5,9 +5,9 @@ Expense Management: Add, edit, and delete expenses easily.
 Budget Tracking: Set budget limits and receive alerts when exceeding them.
 Transactions: 
 # Technologies Used
-Frontend: HTML, CSS, JavaScript
-Backend: PHP, MySQL
-Deployment: Hosted on a web server
+  Frontend: HTML, CSS, JavaScript
+  Backend: PHP, MySQL
+  Deployment: Hosted on a web server
 # Usage
 Register for an account or log in if you already have one.
 Add your expenses by providing necessary details such as date, amount, and category.
