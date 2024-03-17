@@ -22,6 +22,18 @@ Set budget limits and reminders to manage your finances effectively.
 
 Analyze your spending habits and track your financial goals.
 
+## Contributing
+
+Contributions to MoneySights are highly encouraged and welcome! If you're interested in contributing to the project, please follow these guidelines:
+
+1. Fork the repository to your GitHub account.
+   
+3. Create a new branch for your feature or enhancement (`git checkout -b feature-new-feature`).
+4.  Make your changes and ensure they adhere to the project's coding standards.
+6. Test your changes thoroughly and commit them with descriptive messages (`git commit -am 'Add new feature'`).
+7. Push your changes to your forked repository (`git push origin feature-new-feature`).
+8. Submit a pull request detailing the changes you've made and their significance.
+
 ![welcome](https://github.com/Msgasu/ExpenseTracker/assets/115842884/3d52ce82-ab77-44d8-87bc-0904457236cb)
 ![register](https://github.com/Msgasu/ExpenseTracker/assets/115842884/ef88c8d8-c50f-4582-a522-91dbd011eece)
 ![login](https://github.com/Msgasu/ExpenseTracker/assets/115842884/dbd1cf7d-ad8d-475e-baf5-3697d709f85a)
