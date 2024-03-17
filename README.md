@@ -21,3 +21,8 @@ Add your expenses by providing necessary details such as date, amount, and categ
 Set budget limits and reminders to manage your finances effectively.
 
 Analyze your spending habits and track your financial goals.
+
+![welcome](https://github.com/Msgasu/ExpenseTracker/assets/115842884/3d52ce82-ab77-44d8-87bc-0904457236cb)
+![register](https://github.com/Msgasu/ExpenseTracker/assets/115842884/ef88c8d8-c50f-4582-a522-91dbd011eece)
+![login](https://github.com/Msgasu/ExpenseTracker/assets/115842884/dbd1cf7d-ad8d-475e-baf5-3697d709f85a)
+
