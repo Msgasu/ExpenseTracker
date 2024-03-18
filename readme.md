@@ -45,6 +45,7 @@ Import the provided SQL file. The file is known as MS2025.sql located inside the
 Browse the MoneySights System in a browser. i.e. http://localhost/MoneySights.
    # Configuration
 Configuration files (e.g., connection.php) where database connection settings are stored.
+
 Environment variables or constants that need to be set.
 
 
