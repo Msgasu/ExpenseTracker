@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneySights - Expense Tracker</title>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="../css/style.css" />
+     <!-- MATERIAL CDN -->
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet"
+  />
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif; /* Updated font */
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            background-color: var(--color-background); /* Changed to use variable */
+            color: var(--color-dark); /* Changed to use variable */
+            text-align: center; /* Center align all text */
+        }
+
+        header {
+            background-color: var(--color-primary); /* Changed to use variable */
+            color: var(--color-white); /* Changed to use variable */
+            padding: 20px;
+        }
+
+        .left{
+            width: 100%; /* Occupy full width */
+            padding: 20px; /* Increased padding for better spacing */
+            font-size: 1rem; /* Increased font size */  
+            margin-bottom: 20px;      
+        }
+        
+        .left .buttons{
+            margin-top: 30px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap; /* Enable wrapping for smaller screens */
+            justify-content: center; /* Center align features */
+            gap: 20px; /* Added gap between features */
+            margin-top: 20px; /* Added margin for better spacing */
+        }
+
+        .feature {
+            width: 160px;
+            text-align: center;
+            padding: 20px; /* Added padding for better spacing */
+            border-radius: var(--border-radius-1); /* Changed to use variable */
+            background-color: var(--color-white); /* Changed to use variable */
+            box-shadow: var(--box-shadow); /* Changed to use variable */
+        }
+
+        .feature h3{
+            font-size: 1rem;
+            margin-bottom: 10px; /* Added margin for better spacing */
+        }
+
+        .feature p{
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: var(--color-primary); /* Changed to use variable */
+            color: var(--color-white); /* Changed to use variable */
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: var(--border-radius-1); /* Changed to use variable */
+            transition: background-color 0.2s ease; /* Added transition for smoother hover effect */
+        }
+
+        .btn:hover {
+            background-color: var(--color-primary-variant); /* Changed to use variable */
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--color-white); /* Changed to use variable */
+            color: var(--color-white); /* Changed to use variable */
+            padding: 10px 0; /* Added padding for better spacing */
+        }
+
+        .danger{
+            color: var(--color-danger); /* Changed to use variable */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+      <div class="container">
+       
+        <div class="name">
+          <div class="logo">
+              <img src="../assets/images/logo.png" alt="logo">
+              <!-- <h2>MONEY<span class="danger">SIGHTS</span></h2> -->
+              <h2><span class="green">MONEY</span>SIGHTS</h2>
+          </div>
+          <div class="close" id="close-btn">
+              <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+        
+          <div class="profile-area">
+              <div class="theme-toggler">
+                  <span class="material-icons-sharp active">light_mode</span>
+                  <span class="material-icons-sharp">dark_mode</span>
+              </div>
+           
+          </div>
+      </div>
+    </nav>
+
+    <section>
+        <section class="left">
+            <h1>Get Started</h1>
+            <h3>Manage your expenses with ease and convenience</h3>
+            <p>Our expense tracker allows you to stay on top of your finances, anywhere and anytime.</p>
+            <div class="buttons">
+                <a href="../login/login_page.php" class="btn">Log In</a> <!-- Changed link to anchor tag -->
+                <a href="../login/register_page.php" class="btn">Sign Up</a> <!-- Changed link to anchor tag -->
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="../assets/images/budget.jpg" alt="Budget Icon">
+                    <h3>Set Monthly Budget</h3>
+                    <p>Track your spending to avoid overspending</p>
+                </div>
+                <div class="feature">
+                    <img src="../assets/images/category.jpg" alt="Categories Icon">
+                    <h3>Organize Expenses</h3>
+                    <p>Organize expenses into different categories</p>
+                </div>
+                <div class="feature">
+                    <img src="../assets/images/momo.jpg" alt="Money Icon">
+                    <h3>Add Expenses</h3>
+                    <p>Track expenses using Mobile Money, and cash</p>
+                </div>
+                <div class="feature">
+                    <img src="../assets/images/plan.jpg" alt="Plans Icon">
+                   
+                    <p>Set and track plans such as debts, savings</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MoneySights. All rights reserved.</p>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script>
+        themeToggler.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme-variables');              
+        })
+    </script>
+
+</body>
+</html>
